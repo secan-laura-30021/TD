@@ -1,0 +1,61 @@
+{% extends "base-vue.html" %}
+
+{% block html_tag_attributes %}lang="en"{% endblock %}
+
+{% block content %}
+
+<noscript>
+    <strong>Please enable JavaScript to continue.</strong>
+</noscript>
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">CarShop</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'login' %}" id="nav-item"><i class="fa fa-sign-in" aria-hidden="true"></i> Logare</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'signup' %}" id="nav-item"><i class="fa fa-user" aria-hidden="true"></i> Creaza un cont</a>
+            </li>
+        </ul>
+    </div>
+
+    <a class="navbar-brand-right" href="{% url 'cart_lister' %}"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+</nav>
+
+<div>&nbsp;</div>
+<div class="margin-mid"></div>
+
+<div class="container" align="center">
+    <div class="col-lg-12">
+        <div class="introduction-title">
+            <h2>Logeaza-te in contul de utilizator</h2>
+        </div>
+    </div>
+</div>
+
+<div class="margin-mid"></div>
+
+<div class="container">
+    <div class="col-lg-12">
+        <div class="sign-up-form" align="center">
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div>&nbsp;</div>
+                <button type="submit" class="btn btn-dark">Creaza cont</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="app">
+
+</div>
+
+{% endblock %}
