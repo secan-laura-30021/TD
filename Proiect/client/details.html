@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles/details.css" />
+    <script type="text/javascript" src="libs/vue.js"></script>
+    <script type="text/javascript" src="libs/axios.js"></script>
+</head>
+
+<body>
+    <a href="index.html">Home</a>
+    <div id="details">
+        <h1>Detalii pentru produsul cu id-ul: {{ id }}</h1>
+        <div class="container">
+            <div class="custom"></div>
+            <div class="label">Name:</div>
+            <div class="value">{{car.name}}</div>
+        </div>
+        <div class="label">Serie_sasiu:</div>
+        <div class="value">{{car.serie_sasiu}}</div>
+        <div class="label">Price:</div>
+        <div class="value">{{car.price}}</div>
+        <div class="label">An_fabricatie:</div>
+        <div class="value">{{car.an_fabricatie}}</div>
+        <div class="label">Motorizare:</div>
+        <div class="value">{{car.motorizare}}</div>
+        <div class="label">Kilometraj:</div>
+        <div class="value">{{car.kilometraj}}</div>
+        <div class="label">Putere:</div>
+        <div class="value">{{car.putere}}</div>
+        <div class="label">Capacitate_cilindrica:</div>
+        <div class="value">{{car.capacitate_cilindrica}}</div>
+        <div class="label">Norma_de_poluare:</div>
+        <div class="value">{{car.norma_de_poluare}}</div>
+        <div class="label">Culoare:</div>
+        <div class="value">{{car.culoare}}</div>
+        <div class="label">Tara_de_origine:</div>
+        <div class="value">{{car.tara_de_origine}}</div>
+        <div class="label">Oferit_de:</div>
+        <div class="value">{{car.oferit_de}}</div>
+        <div class="label">Stare:</div>
+        <div class="value">{{car.stare}}</div>
+
+    </div>
+    <script src="src/details.js"></script>
+</body>
+
+</html>

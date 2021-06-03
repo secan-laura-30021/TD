@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script type="text/javascript" src="libs/vue.js"></script>
+        <script type="text/javascript" src="libs/axios.js"></script>
+    </head>
+    <body>
+        <a href="index.html">Home</a>
+        <div id="update">
+            Actualizare masina cu id-ul: {{ id }} <br>
+            Name: <input type="text" v-model="car.name">
+            Serie_sasiu: <input type="text" v-model="car.serie_sasiu">
+            Price: <input type="text" v-model="car.price">
+            An_fabricatie: <input type="text" v-model="car.an_fabricatie">
+            Motorizare: <input type="text" v-model="car.motorizare">
+            Kilometraj: <input type="text" v-model="car.kilometraj">
+            Putere: <input type="text" v-model="car.putere">
+            Capacitate_cilindrica: <input type="text" v-model="car.capacitate_cilindrica">
+            Norma_de_poluare: <input type="text" v-model="car.norma_de_poluare">
+            Culoare: <input type="text" v-model="car.culoare">
+            Tara_de_origine: <input type="text" v-model="car.tara_de_origine">
+            Oferit_de: <input type="text" v-model="car.oferit_de">
+            Stare: <input type="text" v-model="car.stare">
+            <button  v-on:click="update(car.id)">Save</button>
+
+            <p>{{message}}</p>
+
+        </div>
+
+        <script src="src/update.js"></script>
+    </body>
+</html>
